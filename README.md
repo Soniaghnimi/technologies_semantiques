@@ -12,10 +12,10 @@ Le domaine de la santé est essentiel pour structurer et gérer les informations
 ## Concepts clés 
 -Patient (Patient) : Identifiant, nom, âge, antécédents médicaux.  
 -Médecin (Doctor) : Identifiant, nom, spécialité, hôpital d’exercice.  
--Consultation (Consultation) : date, durée, patient concerné, médecin responsable.
--Maladie (Disease) : Nom, symptômes, type.
--Traitement : médicament, thérapie, durée.
--Hôpital (Hospital) : Nom, adresse,services disponibles.
+-Consultation (Consultation) : date, durée, patient concerné, médecin responsable.  
+-Maladie (Disease) : Nom, symptômes, type.  
+-Traitement : médicament, thérapie, durée.  
+-Hôpital (Hospital) : Nom, adresse,services disponibles.  
 
 ## Structure du projet
 - /ontologie : Contiendra les fichiers RDF/OWL
