@@ -1,0 +1,471 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-8#"
+     xml:base="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-8"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-5="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-8"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#aConsulté -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#aConsulté">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Patient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#aDiagnostiqué -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#aDiagnostiqué">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Maladie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#effectueéPar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#effectueéPar">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Médecin"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#emploie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#emploie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Hopital"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Médecin"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#hospitaliséDans -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#hospitaliséDans">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Patient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Hopital"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#prescrit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#prescrit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Médecin"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Traitement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#recoit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#recoit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Patient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Traitement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#souffreDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#souffreDe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Patient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Maladie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#traite -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#traite">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Traitement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Maladie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#travailleDans -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#travailleDans">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Médecin"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Hopital"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <owl:inverseOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#aPourDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#aPourDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#aPourDurée -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#aPourDurée">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Traitement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#aPourSpecialité -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#aPourSpecialité">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Médecin"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Hopital -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Hopital">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Maladie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Maladie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Médecin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Médecin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Patient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Patient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Traitement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Traitement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Paracétamol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Paracétamol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Traitement"/>
+        <untitled-ontology-5:aPourDurée>15 jours</untitled-ontology-5:aPourDurée>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#asthma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#asthma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Maladie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#cholestase -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#cholestase">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Maladie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#consulation5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#consulation5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <untitled-ontology-5:aPourDate>12/05/2025</untitled-ontology-5:aPourDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#consultation1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#consultation1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <untitled-ontology-5:aPourDate>14/05/5025</untitled-ontology-5:aPourDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#consultation2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#consultation2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <untitled-ontology-5:aDiagnostiqué rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#asthma"/>
+        <untitled-ontology-5:aPourDate>12/05/2025</untitled-ontology-5:aPourDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#consultation3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#consultation3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <untitled-ontology-5:effectueéPar rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#islem"/>
+        <untitled-ontology-5:aPourDate>30/05/2025</untitled-ontology-5:aPourDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#consultation4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#consultation4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <untitled-ontology-5:aPourDate>14/05/2025</untitled-ontology-5:aPourDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#grippe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#grippe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Maladie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#grippex -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#grippex">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Traitement"/>
+        <untitled-ontology-5:traite rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#grippe"/>
+        <untitled-ontology-5:aPourDurée>10 jours</untitled-ontology-5:aPourDurée>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#hedi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#hedi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Patient"/>
+        <untitled-ontology-5:aConsulté rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#consultation1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#hopital_hedi_cheker -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#hopital_hedi_cheker">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Hopital"/>
+        <untitled-ontology-5:emploie rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#islem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#insuffisance_cardiaque -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#insuffisance_cardiaque">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Maladie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#islem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#islem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Médecin"/>
+        <untitled-ontology-5:aPourSpecialité>cardiologue</untitled-ontology-5:aPourSpecialité>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#ivabradine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#ivabradine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Traitement"/>
+        <untitled-ontology-5:aPourDurée>a vie</untitled-ontology-5:aPourDurée>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#mayssa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#mayssa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Médecin"/>
+        <untitled-ontology-5:prescrit rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#vontoline"/>
+        <untitled-ontology-5:aPourSpecialité>pneumologue</untitled-ontology-5:aPourSpecialité>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#mohamed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#mohamed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Patient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#montasar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#montasar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Patient"/>
+        <untitled-ontology-5:souffreDe rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#grippe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#oumaima -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#oumaima">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Patient"/>
+        <untitled-ontology-5:hospitaliséDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#hopital_hedi_cheker"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#sirine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#sirine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Patient"/>
+        <untitled-ontology-5:recoit rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Paracétamol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#sonia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#sonia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Médecin"/>
+        <untitled-ontology-5:travailleDans rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#hopital_hedi_cheker"/>
+        <untitled-ontology-5:aPourSpecialité>généraliste</untitled-ontology-5:aPourSpecialité>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#ursodiol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#ursodiol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Traitement"/>
+        <untitled-ontology-5:aPourDurée>60 jours</untitled-ontology-5:aPourDurée>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#varicelle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#varicelle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Maladie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#vontoline -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#vontoline">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Consultation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-5#Traitement"/>
+        <untitled-ontology-5:aPourDurée>90 jours</untitled-ontology-5:aPourDurée>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
