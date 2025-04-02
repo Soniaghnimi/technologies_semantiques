@@ -1,8 +1,8 @@
 # Ontologie Médicale - Technologies Sémantiques
 
 ## 👥 Membres de l'équipe
-- [Islem Jarrar].
-- [Sonia Ghnimi].
+- Islem _Jarrar.
+- Sonia_ Ghnimi.
 
 ## 🏥 Domaine : Système d'Information Médical
 
