@@ -50,7 +50,8 @@ WHERE d.maladie_id = ci.maladie_id;
 | Flexibilité                    | Modélisation sémantique riche       | Schéma rigide                   |
 | Maintenance                    | Règles centralisées                 | Code dispersé                   | 
 
- ✅ Conclusion   
+ ✅ Conclusion  
+ 
 L’utilisation d’une ontologie OWL permet :  
 
 Une détection automatique des incohérences  
