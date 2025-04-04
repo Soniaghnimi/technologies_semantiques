@@ -32,14 +32,14 @@ Le système détecte automatiquement qu'un traitement est inadapté à une malad
 ---
 
 
-| Critère                        | Ontologie OWL                       | Base SQL Relationnelle         |
-|---------------------------------|--------------------------------------|--------------------------------|
-| Détection d'erreurs            | Inférence automatique               | Nécessite des déclencheurs complexes |
-| Évolutivité                    | Ajout de règles sans migration      | ALTER TABLE nécessaire         |
-| Performance                    | Peut ralentir sur >100k instances    | Optimisé pour gros volumes    |
-| Flexibilité                    | Modélisation sémantique riche       | Schéma rigide                 |
-| Maintenance                    | Règles centralisées                 | Code dispersé                 |
 
+| **Critère**                    | **Ontologie OWL**                   | **Base SQL Relationnelle**       |
+|---------------------------------|--------------------------------------|----------------------------------|
+| Détection d'erreurs            | Inférence automatique               | Nécessite des déclencheurs complexes |
+| Évolutivité                    | Ajout de règles sans migration      | ALTER TABLE nécessaire           |
+| Performance                    | Peut ralentir sur >100k instances    | Optimisé pour gros volumes      |
+| Flexibilité                    | Modélisation sémantique riche       | Schéma rigide                   |
+| Maintenance                    | Règles centralisées                 | Code dispersé                   |
 
 
 ## **✅Conclusion :**
