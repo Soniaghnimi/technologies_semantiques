@@ -48,8 +48,9 @@ WHERE d.maladie_id = ci.maladie_id;
 | Évolutivité                    | Ajout de règles sans migration      | ALTER TABLE nécessaire           |
 | Performance                    | Peut ralentir sur >100k instances    | Optimisé pour gros volumes      |
 | Flexibilité                    | Modélisation sémantique riche       | Schéma rigide                   |
-| Maintenance                    | Règles centralisées                 | Code dispersé                   |
-✅ Conclusion
+| Maintenance                    | Règles centralisées                 | Code dispersé                   | 
+
+ ✅ Conclusion
 L’utilisation d’une ontologie OWL permet :  
 
 Une détection automatique des incohérences  
