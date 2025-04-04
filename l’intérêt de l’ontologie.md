@@ -1,6 +1,6 @@
-🧠 #**Comparaison entre une Ontologie OWL et une Base de Données Relationnelle**  
-📘 Scénario utilisant OWL (Web Ontology Language)   
-🎯 Fonctionnalité :  
+🧠 **Comparaison entre une Ontologie OWL et une Base de Données Relationnelle**  
+📘 **Scénario utilisant OWL (Web Ontology Language)**  
+🎯 **Fonctionnalité :  **
 Le système détecte automatiquement qu’un traitement est inadapté à une maladie.   
 
 ✅ Avantage clé : Pas besoin d’écrire une requête manuelle grâce au raisonneur (reasoner).  
