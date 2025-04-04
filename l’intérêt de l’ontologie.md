@@ -31,12 +31,12 @@ WHERE d.maladie_id = ci.maladie_id;
 📊 Tableau comparatif  
 
 
-| Fonctionnalité               | Ontologie OWL                    | Base Relationnelle            |
-|------------------------------|-----------------------------------|-------------------------------|
-| Inférence automatique         | ✅ (via Raisonneur)               | ❌ (Requête manuelle)         |
-| Hiérarchie dynamique          | ✅ (subClassOf)                   | ❌ (Corrections de tables)    |
-| Flexibilité sémantique        | ✅ (OWL DL)                       | ❌ (Schéma rigide)            |
-| Gestion des contradictions    | ✅ (Vérification de cohérence)    | ❌ (Problèmes de redondance)  |
+🧩 Fonctionnalité	🧠 Ontologie OWL	🗃️ Base Relationnelle
+🤖 Inférence automatique	✅ (via Raisonneur)	❌ (Requête manuelle)
+🧬 Hiérarchie dynamique	✅ (subClassOf)	❌ (Corrections de tables)
+🧠 Flexibilité sémantique	✅ (OWL DL)	❌ (Schéma rigide)
+🚨 Gestion des contradictions	✅ (Vérification de cohérence)	❌ (Problèmes de redondance)
+
 
 🔎 Analyse détaillée  
 
