@@ -142,34 +142,46 @@ Nous avons enrichi notre ontologie avec des éléments OWL :
 ### 🔨 Phase 5 : Règles SWRL
 Nous avons ajouté 4 règles SWRL pour enrichir les inférences :
 
-#### Règle 1 : Si un patient a une consultation, alors il est un patient actif
-```swrl
-Patient(?p) ^ aConsulté(?p, ?c) → PatientActif(?p)
+## REQUÊTE 1 - Identification des maladies chroniques
+```
+untitled-ontology-3:TraitementChronique(?m) ^ 
+untitled-ontology-3:traite(?m, ?t) ^ 
+untitled-ontology-3:traitement(?t) 
+-> untitled-ontology-3:MaladieChronique(?t)
 ```
 
-#### Règle 2 : Si un médecin prescrit un traitement à une maladie, il est spécialisé
-```swrl
-Médecin(?m) ^ prescrit(?m, ?t) ^ traite(?t, ?maladie) → Spécialisé(?m)
+
+## REQUÊTE 2 - Consultation urgente selon maladie aiguë
+```
+untitled-ontology-3:consultation(?c) ^ 
+untitled-ontology-3:aconsulté(?c, ?p) ^ 
+untitled-ontology-3:souffreDe(?p, ?m) ^ 
+untitled-ontology-3:MaladieAigue(?m) 
+-> untitled-ontology-3:ConsultationUrgente(?c)
 ```
 
-#### Règle 3 : Si une consultation a diagnostiqué une maladie, alors le patient concerné a cette maladie
-```swrl
-Consultation(?c) ^ aDiagnostiqué(?c, ?m) ^ aConsulté(?p, ?c) → aMaladie(?p, ?m)
+## REQUÊTE 3 - Patient traité par médecin
+```
+untitled-ontology-3:aconsulté(?p, ?m) ^ 
+untitled-ontology-3:aDiagnostiqué(?m, ?d) 
+-> untitled-ontology-3:traite(?m, ?p)
 ```
 
-#### Règle 4 : Si un traitement dure plus de 30 jours, alors il est long terme
-```swrl
-Traitement(?t) ^ duree(?t, ?d) ^ swrlb:greaterThan(?d, 30) → LongTerme(?t)
+
+## REQUÊTE 4 - (Doublon de la REQUÊTE 3)
+```
+untitled-ontology-3:aconsulté(?p, ?m) ^ 
+untitled-ontology-3:aDiagnostiqué(?m, ?d) 
+-> untitled-ontology-3:traite(?m, ?p)
 ```
 
----
 
-### 📅 Période de réalisation
-- **Durée** : 5 semaines (19/03 - 30/04)
-- **Pré-évaluation** : 16/04
-- **Évaluation finale** : 07/05 - 14/05
-
----
+## REQUÊTE 5 - Patient hospitalisé
+```
+untitled-ontology-3:souffreDe(?p, ?m) ^ 
+untitled-ontology-3:MaladieChronique(?m) ^ 
+untitled-ontology-3:hospitaliséeDans(?m, ?h) 
+-> untitled-ontology-3:hospitaliséeDans(?p, ?h)
 
 ### 📦 Livrables
 - Fichiers RDF/XML et OWL dans le répertoire `/ontologie`
@@ -182,9 +194,6 @@ Traitement(?t) ^ duree(?t, ?d) ^ swrlb:greaterThan(?d, 30) → LongTerme(?t)
 ### 📊 Conclusion
 Ce projet nous a permis de mettre en pratique les concepts fondamentaux des technologies sémantiques : modélisation RDF/OWL, interrogation SPARQL, inférence par règles SWRL. L'ontologie développée dans le domaine de la santé illustre l'avantage de la représentation sémantique pour structurer, exploiter et raisonner sur les données complexes dans un environnement réel.
 
----
 
-### 👁️ Auteurs
-- Islem Jarrar (islem.jarrar@etudiant-example.tn)
-- Sonia Ghnimi (sonia.ghnimi@etudiant-example.tn)
+
 
