@@ -55,7 +55,10 @@ Nous avons créé des classes RDF pour chaque entité du domaine et utilisé les
 | hospitaliséDans  | Patient     | Hôpital        | Un patient est hospitalisé dans un hôpital |
 | travailleDans    | Médecin     | Hôpital        | Un médecin travaille dans un hôpital |
 | effectuéePar     | Consultation| Médecin        | Une consultation est effectuée par un médecin |
-
+| souffreDe        | Patient     | maladie        | un patient souffre d'une maladie |
+| aPourDate        | Consultation| date           | une consultation a une date specifique |
+| aPourSpecialité  | medecin     | specialité     | un medecin a une specialité |
+| recoit           | patient     | traitement     | un patient recoit un traitement |
 ---
 
 # REQUÊTE 1 - Patients et leurs maladies
