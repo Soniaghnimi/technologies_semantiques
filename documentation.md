@@ -46,82 +46,87 @@ Nous avons créé des classes RDF pour chaque entité du domaine et utilisé les
 - `owl:` http://www.w3.org/2002/07/owl#
 
 #### 🔗 Relations RDF créées
-| Propriété         | Domaine      | Portée (Range) | Description                                                      |
-|------------------|--------------|----------------|------------------------------------------------------------------|
-| aConsulté        | Patient      | Consultation   | Un patient a consulté un médecin dans une consultation          |
-| aDiagnostiqué    | Consultation | Maladie        | Une consultation a mené à un diagnostic de maladie              |
-| prescrit         | Médecin      | Traitement     | Un médecin prescrit un traitement                               |
-| traite           | Traitement   | Maladie        | Le traitement cible une maladie                                 |
-| hospitaliséDans  | Patient      | Hôpital        | Un patient est hospitalisé dans un hôpital                      |
-| travailleDans    | Médecin      | Hôpital        | Un médecin travaille dans un hôpital                            |
-| effectuéePar     | Consultation | Médecin        | Une consultation est effectuée par un médecin                   |
-| souffreDe        | Patient      | Maladie        | Un patient souffre d'une maladie                                |
-| aPourDate        | Consultation | Date           | Une consultation a une date spécifique                          |
-| aPourSpecialité  | Médecin      | Spécialité     | Un médecin a une spécialité                                     |
-| recoit           | Patient      | Traitement     | Un patient reçoit un traitement                                 |
+| Propriété         | Domaine     | Portée (Range) | Description |
+|------------------|-------------|----------------|-------------|
+| aConsulté        | Patient     | Consultation   | Un patient a consulté un médecin dans une consultation |
+| aDiagnostiqué    | Consultation| Maladie        | Une consultation a mené à un diagnostic de maladie |
+| prescrit         | Médecin     | Traitement     | Un médecin prescrit un traitement |
+| traite           | Traitement  | Maladie        | Le traitement cible une maladie |
+| hospitaliséDans  | Patient     | Hôpital        | Un patient est hospitalisé dans un hôpital |
+| travailleDans    | Médecin     | Hôpital        | Un médecin travaille dans un hôpital |
+| effectuéePar     | Consultation| Médecin        | Une consultation est effectuée par un médecin |
+| souffreDe        | Patient     | maladie        | un patient souffre d'une maladie |
+| aPourDate        | Consultation| date           | une consultation a une date specifique |
+| aPourSpecialité  | medecin     | specialité     | un medecin a une specialité |
+| recoit           | patient     | traitement     | un patient recoit un traitement |
+
+
 ---
 
-# REQUÊTE 1 - Patients et leurs maladies
-PREFIX : <http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#> 
-SELECT ?patient ?maladie WHERE { ?patient a :Patient ; :souffreDe ?maladie . } 
+### 🔍 Phase 3 : Interrogation avec SPARQL
+Nous avons conçu 8 requêtes SPARQL pertinentes pour interroger l'ontologie :
 
-# REQUÊTE 2 - Médecins par spécialité
-PREFIX : <http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#> 
-SELECT ?medecin ?specialite WHERE { ?medecin a :medecin ; :aPourSpecialité ?specialite . }
+### REQUÊTE 1 - Patients et leurs maladies
+```sparql
+SELECT ?patient ?maladie WHERE {
+  ?patient a :Patient ;
+          :souffreDe ?maladie .
+}
+```
 
-# REQUÊTE 3 - Prescriptions complètes
-PREFIX : <http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#>
+### REQUÊTE 2 - Médecins par spécialité
+```sparql
+SELECT ?medecin ?specialite WHERE {
+  ?medecin a :medecin ;
+          :aPourSpecialité ?specialite .
+}
+```
+
+### REQUÊTE 3 - Prescriptions complètes
+```sparql
 SELECT ?medecin ?patient ?traitement ?duree WHERE {
   ?medecin :prescrit ?traitement .
   ?patient :recoit ?traitement .
   ?traitement :aPourDurée ?duree .
 }
+```
 
-# REQUÊTE 4 - Patients hospitalisés
-PREFIX : <http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#>
-
+### REQUÊTE 4 - Patients hospitalisés
+```sparql
 SELECT DISTINCT ?patient ?hopital ?medecin WHERE {
   ?patient :hospitaliséeDans ?hopital .
   ?hopital :emploie ?medecin .
   ?medecin a :medecin .
 }
+```
 
-
-# REQUÊTE 5 - Traitements spécifiques
-PREFIX : <http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#>
-
+### REQUÊTE 5 - Traitements spécifiques
+```sparql
 SELECT ?maladie ?traitement ?duree WHERE {
   ?traitement :traite ?maladie ;
               :aPourDurée ?duree .
 }
 ORDER BY DESC(?duree)
+```
 
-
-
-
-# REQUÊTE 6 - Agenda médical
-PREFIX : <http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
+### REQUÊTE 6 - Agenda médical (mai 2025)
+```sparql
 SELECT ?consultation ?date ?medecin ?maladie WHERE {
   ?consultation a :consultation ;
                 :aPourDate ?date ;
                 :effectueéPar ?medecin ;
                 :aDiagnostiqué ?maladie .
-  FILTER(STRSTARTS(?date, "12/05"))  # Filtre mai 2025
+  FILTER(STRSTARTS(?date, "12/05"))
 }
+```
 
-
-
-# REQUÊTE 7 - Exploration complète d'un médecin
-PREFIX : <http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#>
-
+### REQUÊTE 7 - Exploration d’un médecin
+```sparql
 DESCRIBE :Islem
+```
 
-
-*/# REQUÊTE 8 - Sous-graphe Patients-Maladies-Traitements
-PREFIX : <http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#>
-
+### REQUÊTE 8 - Sous-graphe Patients-Maladies-Traitements
+```sparql
 CONSTRUCT {
   ?patient :aMaladie ?maladie .
   ?maladie :aTraitement ?traitement .
@@ -130,6 +135,9 @@ WHERE {
   ?patient :souffreDe ?maladie .
   ?traitement :traite ?maladie .
 }
+```
+
+---
 
 ### 🔖 Phase 4 : Ontologie OWL
 Nous avons enrichi notre ontologie avec des éléments OWL :
@@ -140,48 +148,53 @@ Nous avons enrichi notre ontologie avec des éléments OWL :
 ---
 
 ### 🔨 Phase 5 : Règles SWRL
-Nous avons ajouté 4 règles SWRL pour enrichir les inférences :
+Nous avons ajouté 5 règles SWRL pour enrichir les inférences :
 
-## REQUÊTE 1 - Identification des maladies chroniques
-```
-untitled-ontology-3:TraitementChronique(?m) ^ 
-untitled-ontology-3:traite(?m, ?t) ^ 
-untitled-ontology-3:traitement(?t) 
+### REQUÊTE 1 - Identification des maladies chroniques
+```swrl
+untitled-ontology-3:TraitementChronique(?m) ^
+untitled-ontology-3:traite(?m, ?t) ^
+untitled-ontology-3:traitement(?t)
 -> untitled-ontology-3:MaladieChronique(?t)
 ```
+*But* : Identifier les maladies associées à un traitement chronique.  
+*Usage* : Suivi des pathologies de longue durée.  
 
 
-## REQUÊTE 2 - Consultation urgente selon maladie aiguë
-```
-untitled-ontology-3:consultation(?c) ^ 
-untitled-ontology-3:aconsulté(?c, ?p) ^ 
-untitled-ontology-3:souffreDe(?p, ?m) ^ 
-untitled-ontology-3:MaladieAigue(?m) 
+### REQUÊTE 2 - Consultation urgente selon maladie aiguë
+```swrl
+untitled-ontology-3:consultation(?c) ^
+untitled-ontology-3:aconsulté(?c, ?p) ^
+untitled-ontology-3:souffreDe(?p, ?m) ^
+untitled-ontology-3:MaladieAigue(?m)
 -> untitled-ontology-3:ConsultationUrgente(?c)
 ```
+*But* : Repérer les consultations urgentes.  
+*Usage* : Triage prioritaire dans les services d'urgence.  
 
-## REQUÊTE 3 - Patient traité par médecin
-```
-untitled-ontology-3:aconsulté(?p, ?m) ^ 
-untitled-ontology-3:aDiagnostiqué(?m, ?d) 
+
+### REQUÊTE 3 - Patient traité par médecin
+```swrl
+untitled-ontology-3:aconsulté(?p, ?m) ^
+untitled-ontology-3:aDiagnostiqué(?m, ?d)
 -> untitled-ontology-3:traite(?m, ?p)
 ```
+*But* : Lier un médecin à un patient qu'il traite.  
+*Usage* : Suivi des responsabilités médicales.  
 
 
-## REQUÊTE 4 - (Doublon de la REQUÊTE 3)
-```
-untitled-ontology-3:aconsulté(?p, ?m) ^ 
-untitled-ontology-3:aDiagnostiqué(?m, ?d) 
--> untitled-ontology-3:traite(?m, ?p)
-```
-
-
-## REQUÊTE 5 - Patient hospitalisé
-```
-untitled-ontology-3:souffreDe(?p, ?m) ^ 
-untitled-ontology-3:MaladieChronique(?m) ^ 
-untitled-ontology-3:hospitaliséeDans(?m, ?h) 
+### REQUÊTE 5 - Patient hospitalisé
+```swrl
+untitled-ontology-3:souffreDe(?p, ?m) ^
+untitled-ontology-3:MaladieChronique(?m) ^
+untitled-ontology-3:hospitaliséeDans(?m, ?h)
 -> untitled-ontology-3:hospitaliséeDans(?p, ?h)
+```
+*But* : Déduire l'hospitalisation du patient à partir de celle de la maladie.  
+*Usage* : Attribution automatique d’hôpital.  
+
+
+---
 
 ### 📦 Livrables
 - Fichiers RDF/XML et OWL dans le répertoire `/ontologie`
@@ -193,7 +206,3 @@ untitled-ontology-3:hospitaliséeDans(?m, ?h)
 
 ### 📊 Conclusion
 Ce projet nous a permis de mettre en pratique les concepts fondamentaux des technologies sémantiques : modélisation RDF/OWL, interrogation SPARQL, inférence par règles SWRL. L'ontologie développée dans le domaine de la santé illustre l'avantage de la représentation sémantique pour structurer, exploiter et raisonner sur les données complexes dans un environnement réel.
-
-
-
-
