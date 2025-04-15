@@ -61,13 +61,13 @@ Nous avons créé des classes RDF pour chaque entité du domaine et utilisé les
 # REQUÊTE 1 - Patients et leurs maladies
 PREFIX : <http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#> 
 SELECT ?patient ?maladie WHERE { ?patient a :Patient ; :souffreDe ?maladie . } 
-/* But : Lister l'ensemble des diagnostics patients Usage : Suivi épidémiologique */
+
 # REQUÊTE 2 - Médecins par spécialité
 PREFIX : <http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#> 
 SELECT ?medecin ?specialite WHERE { ?medecin a :medecin ; :aPourSpecialité ?specialite . }
+
 # REQUÊTE 3 - Prescriptions complètes
 PREFIX : <http://www.semanticweb.org/administrator/ontologies/2025/2/untitled-ontology-3#>
-
 SELECT ?medecin ?patient ?traitement ?duree WHERE {
   ?medecin :prescrit ?traitement .
   ?patient :recoit ?traitement .
