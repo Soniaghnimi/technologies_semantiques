@@ -46,19 +46,19 @@ Nous avons créé des classes RDF pour chaque entité du domaine et utilisé les
 - `owl:` http://www.w3.org/2002/07/owl#
 
 #### 🔗 Relations RDF créées
-| Propriété         | Domaine     | Portée (Range) | Description |
-|------------------|-------------|----------------|-------------|
-| aConsulté        | Patient     | Consultation   | Un patient a consulté un médecin dans une consultation |
-| aDiagnostiqué    | Consultation| Maladie        | Une consultation a mené à un diagnostic de maladie |
-| prescrit         | Médecin     | Traitement     | Un médecin prescrit un traitement |
-| traite           | Traitement  | Maladie        | Le traitement cible une maladie |
-| hospitaliséDans  | Patient     | Hôpital        | Un patient est hospitalisé dans un hôpital |
-| travailleDans    | Médecin     | Hôpital        | Un médecin travaille dans un hôpital |
-| effectuéePar     | Consultation| Médecin        | Une consultation est effectuée par un médecin |
-| souffreDe        | Patient     | maladie        | un patient souffre d'une maladie |
-| aPourDate        | Consultation| date           | une consultation a une date specifique |
-| aPourSpecialité  | medecin     | specialité     | un medecin a une specialité |
-| recoit           | patient     | traitement     | un patient recoit un traitement |
+| Propriété         | Domaine      | Portée (Range) | Description                                                      |
+|------------------|--------------|----------------|------------------------------------------------------------------|
+| aConsulté        | Patient      | Consultation   | Un patient a consulté un médecin dans une consultation          |
+| aDiagnostiqué    | Consultation | Maladie        | Une consultation a mené à un diagnostic de maladie              |
+| prescrit         | Médecin      | Traitement     | Un médecin prescrit un traitement                               |
+| traite           | Traitement   | Maladie        | Le traitement cible une maladie                                 |
+| hospitaliséDans  | Patient      | Hôpital        | Un patient est hospitalisé dans un hôpital                      |
+| travailleDans    | Médecin      | Hôpital        | Un médecin travaille dans un hôpital                            |
+| effectuéePar     | Consultation | Médecin        | Une consultation est effectuée par un médecin                   |
+| souffreDe        | Patient      | Maladie        | Un patient souffre d'une maladie                                |
+| aPourDate        | Consultation | Date           | Une consultation a une date spécifique                          |
+| aPourSpecialité  | Médecin      | Spécialité     | Un médecin a une spécialité                                     |
+| recoit           | Patient      | Traitement     | Un patient reçoit un traitement                                 |
 ---
 
 # REQUÊTE 1 - Patients et leurs maladies
