@@ -22,7 +22,7 @@ Modéliser les relations patients-médecins-maladies-traitements pour :
 | **Traitement** | durée, médicament                  | prescritPar                  |
 | **Hôpital**    | services, adresse                  | emploie                      |
 
-##  Visualisation de l'ontologie 
+## 👁️ Visualilisation de l'ontologie
 ![image](https://github.com/user-attachments/assets/93e41fa4-0d37-49ff-9247-d3b4a03d55aa)
 
 
