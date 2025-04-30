@@ -42,7 +42,6 @@ Exemple :
 */
 
 
-
 ## REQUÊTE 4 - Patient hospitalisé
 ```
 untitled-ontology-3:souffreDe(?p, ?m) ^ 
